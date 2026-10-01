@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brutus Burger | Artesanal &amp; Brasa</title>
+<meta name="description" content="Brutus Burger — hambúrgueres artesanais grelhados no fogo, adicionais e combos. Monte seu pedido e receba em casa em até 30 minutos.">
+
+<!-- Fontes: Fraunces para títulos + Inter para textos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header class="site-header" id="topo">
+  <div class="header-inner container">
+    <a href="#topo" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <path d="M6 18 C6 9 13 5 20 5 C27 5 34 9 34 18 Z" fill="currentColor"/>
+          <rect x="5" y="21" width="30" height="4" rx="2" fill="currentColor" opacity="0.65"/>
+          <path d="M6 28 H34 C34 33 30 36 25 36 H15 C10 36 6 33 6 28 Z" fill="currentColor"/>
+          <circle cx="14" cy="12" r="1.2" fill="#0B120D"/><circle cx="21" cy="10" r="1.2" fill="#0B120D"/><circle cx="27" cy="13" r="1.2" fill="#0B120D"/>
+        </svg>
+      </span>
+      <span class="brand-name">Brutus&nbsp;Burger</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-pedir">Como pedir</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-ghost header-whats" id="btnHeaderWhats" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.84-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.25 8.23m4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28"/></svg>
+        Pedir no WhatsApp
+      </button>
+
+      <button class="cart-btn" id="btnOpenCart" type="button" aria-haspopup="dialog" aria-controls="carrinho" aria-label="Abrir carrinho">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Artesanal &amp; Brasa</p>
+        <h1>
+          Blend suculento,<br>
+          <em>sabor de verdade.</em>
+        </h1>
+        <p class="hero-lede">
+          Hambúrgueres artesanais grelhados no fogo, ingredientes selecionados e
+          combos feitos para matar sua fome. Monte seu burger, adicione os extras
+          e receba em casa em até 30 minutos.
+        </p>
+        <div class="hero-actions">
+          <a href="#cardapio" class="btn btn-primary">Montar meu Combo</a>
+          <button class="btn btn-outline" id="btnHeroWhats" type="button">Pedir pelo WhatsApp</button>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>150g</dt><dd>de blend artesanal</dd></div>
+          <div><dt>30</dt><dd>min de entrega</dd></div>
+          <div><dt>4.9★</dt><dd>avaliação dos clientes</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob-shape">
+          <!-- FOTO: coloque o arquivo em images/burger1.png (quadrado, 800x800px recomendado).
+               Enquanto o arquivo não existir, a ilustração abaixo aparece automaticamente. -->
+          <img src="images/burger1.png" alt="" class="blob-photo" onerror="this.classList.add('img-missing')">
+          <svg class="pizza-illustration pizza-fallback" viewBox="0 0 300 300" width="100%" height="100%">
+            <path d="M40 140 C40 70 95 40 150 40 C205 40 260 70 260 140 Z" fill="#D9A24B"/>
+            <g fill="#FBEBC7"><ellipse cx="110" cy="85" rx="6" ry="3.5"/><ellipse cx="160" cy="70" rx="6" ry="3.5"/><ellipse cx="205" cy="95" rx="6" ry="3.5"/><ellipse cx="135" cy="112" rx="6" ry="3.5"/></g>
+            <path d="M36 150 Q60 172 84 150 T132 150 T180 150 T228 150 T264 150 L264 160 L36 160 Z" fill="#F2C94C"/>
+            <rect x="40" y="160" width="220" height="18" rx="9" fill="#3ADC7B"/>
+            <rect x="38" y="178" width="224" height="30" rx="15" fill="#5A2E1A"/>
+            <path d="M40 214 H260 C260 250 232 266 200 266 H100 C68 266 40 250 40 214 Z" fill="#D9A24B"/>
+          </svg>
+        </div>
+        <span class="orbit-badge">🔥 Grelhado no fogo</span>
+      </div>
+    </div>
+
+    <svg class="section-divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,64 C240,120 480,0 720,32 C960,64 1200,116 1440,60 L1440,120 L0,120 Z" fill="var(--bg-alt)"/>
+    </svg>
+  </section>
+
+  <!-- ===================== FAIXA DE PEDIDO RÁPIDO ===================== -->
+  <section class="order-strip">
+    <div class="container order-strip-inner">
+      <div>
+        <h2>Peça agora, sem complicação</h2>
+        <p>Escolha os itens abaixo, revise no carrinho e finalize pelo WhatsApp — sem cadastro, sem enrolação.</p>
+      </div>
+      <a href="#cardapio" class="btn btn-primary">Montar meu pedido</a>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="about" id="sobre">
+    <div class="container about-grid">
+      <div class="about-figure" aria-hidden="true">
+        <div class="blob-shape blob-shape--small">
+          <!-- FOTO: coloque o arquivo em images/burger2.png (quadrado, 700x700px recomendado). -->
+          <img src="images/burger2.png" alt="" class="blob-photo" onerror="this.classList.add('img-missing')">
+          <svg class="pizza-fallback" viewBox="0 0 200 200" width="100%" height="100%">
+            <path d="M30 95 C30 55 65 35 100 35 C135 35 170 55 170 95 Z" fill="#D9A24B"/>
+            <rect x="28" y="100" width="144" height="22" rx="11" fill="#5A2E1A"/>
+            <path d="M30 128 H170 C170 160 150 172 125 172 H75 C50 172 30 160 30 128 Z" fill="#F4D18C"/>
+          </svg>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Nossa história</p>
+        <h2>Hambúrguer de verdade, feito na brasa e sem atalho</h2>
+        <p>
+          O Brutus Burger nasceu da vontade de fazer um hambúrguer de verdade.
+          Blend artesanal, ingredientes selecionados e carne grelhada no fogo —
+          sem atalhos e sem fórmula pronta.
+        </p>
+        <p>
+          Hoje entregamos em toda a região, mas o cuidado na chapa e na brasa
+          continua o mesmo de sempre.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CARDÁPIO / CARRINHO ===================== -->
+  <section class="menu-section" id="cardapio">
+    <svg class="section-divider section-divider--top" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 C240,10 480,110 720,70 C960,30 1200,90 1440,50 L1440,0 L0,0 Z" fill="var(--green)"/>
+    </svg>
+
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow eyebrow--onGreen">Cardápio</p>
+        <h2>Monte seu combo</h2>
+      </div>
+
+      <div class="menu-tabs" role="tablist" aria-label="Categorias do cardápio" id="menuTabs">
+        <button class="tab-btn is-active" role="tab" aria-selected="true" data-cat="burgers" type="button">Burgers Artesanais</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-cat="adicionais" type="button">Adicionais</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-cat="acompanhamentos" type="button">Acompanhamentos &amp; Bebidas</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Os cards de produto são renderizados via JavaScript a partir do array `produtos` em script.js -->
+      </div>
+    </div>
+
+    <svg class="section-divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,64 C240,120 480,0 720,32 C960,64 1200,116 1440,60 L1440,120 L0,120 Z" fill="var(--bg)"/>
+    </svg>
+  </section>
+
+  <!-- ===================== COMO PEDIR ===================== -->
+  <section class="steps" id="como-pedir">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Passo a passo</p>
+        <h2>Como funciona o pedido</h2>
+      </div>
+      <ol class="steps-grid">
+        <li class="step-card">
+          <span class="step-num">1</span>
+          <h3>Escolha seu Burger</h3>
+          <p>Navegue pelo cardápio, monte seu combo e selecione seus adicionais favoritos.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num">2</span>
+          <h3>Revise os Extras</h3>
+          <p>Ajuste quantidades, adicione a batata frita e veja o valor final na tela.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num">3</span>
+          <h3>Peça no WhatsApp</h3>
+          <p>Com um clique, seu pedido vai formatado direto para a nossa chapa via WhatsApp.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Quem já provou</p>
+        <h2>O que dizem os clientes</h2>
+      </div>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>“O melhor burger da região, sem dúvida. A carne vem suculenta e no ponto certo.”</p>
+          <cite>— Marina T.</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>“Peço toda sexta com a galera. Chega sempre quente e no prazo.”</p>
+          <cite>— Rafael S.</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>“O Brutus Bacon é disparado o melhor que já comi na cidade. Recomendo de olhos fechados.”</p>
+          <cite>— Camila O.</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="contact" id="contato">
+    <svg class="section-divider section-divider--top" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 C240,10 480,110 720,70 C960,30 1200,90 1440,50 L1440,0 L0,0 Z" fill="var(--green)"/>
+    </svg>
+
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow eyebrow--onGreen">Contato</p>
+        <h2>Fale com a gente</h2>
+        <ul class="contact-list">
+          <li>
+            <strong>Endereço</strong>
+            <span>Rua do Fogo, 123 — Centro</span>
+          </li>
+          <li>
+            <strong>Horário</strong>
+            <span>Terça a domingo, 18h às 23h30</span>
+          </li>
+          <li>
+            <strong>Telefone / WhatsApp</strong>
+            <span>(00) 00000-0000</span>
+          </li>
+        </ul>
+        <button class="btn btn-dark" id="btnContactWhats" type="button">Chamar no WhatsApp</button>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-row form-row--split">
+          <div>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+          </div>
+          <div>
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Reserva, evento, dúvida...">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">Brutus&nbsp;Burger</span>
+      <p>Artesanal &amp; Brasa — blend suculento, sabor de verdade.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-pedir">Como pedir</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <p class="footer-copy">© <span id="anoAtual"></span> Brutus Burger. Todos os direitos reservados.</p>
+    <!-- Crédito do desenvolvedor -->
+    <p class="credito-dev">
+      Desenvolvido por
+      <a href="https://github.com/cleiton141-ai" target="_blank" rel="noopener noreferrer">Cleiton Lima</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ===================== BOTÃO FLUTUANTE DO CARRINHO ===================== -->
+<button class="fab-cart" id="btnFabCart" type="button" aria-haspopup="dialog" aria-controls="carrinho" aria-label="Abrir carrinho de compras">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+  </svg>
+  <span class="fab-cart-count" id="fabCartCount">0</span>
+</button>
+
+<!-- ===================== GAVETA DO CARRINHO ===================== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="carrinho" role="dialog" aria-modal="true" aria-label="Carrinho de compras" aria-hidden="true">
+  <div class="cart-header">
+    <h2>Seu pedido</h2>
+    <button class="cart-close" id="btnCloseCart" type="button" aria-label="Fechar carrinho">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmptyMsg">Seu carrinho está vazio. Adicione um burger para começar 🍔</p>
+    <!-- Itens do carrinho são renderizados via JavaScript -->
+  </div>
+
+  <div class="cart-summary">
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">R$ 0,00</span>
+    </div>
+    <div class="summary-row">
+      <span>Taxa de entrega</span>
+      <span id="cartDelivery">R$ 0,00</span>
+    </div>
+    <p class="summary-hint" id="deliveryHint">Frete grátis a partir de R$ 80,00</p>
+    <div class="summary-row summary-row--total">
+      <span>Total</span>
+      <span id="cartTotal">R$ 0,00</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="btnCheckoutWhats" type="button">
+      Finalizar pelo WhatsApp
+    </button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
